@@ -14,6 +14,10 @@ while True:
     
     if first_frame is None:
         first_frame = gray_frame_gau
+        continue
+        
+    delta_frame = cv2.absdiff(first_frame, gray_frame_gau)
+    
     
     key = cv2.waitKey(1)
     
