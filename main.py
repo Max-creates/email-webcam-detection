@@ -1,11 +1,11 @@
 import glob
-
 import cv2
 import time
 from emailing import send_email
 import os
 from threading import Thread
 
+os.makedirs("images", exist_ok=True)
 video = cv2.VideoCapture(0)
 time.sleep(1)
 
@@ -13,10 +13,12 @@ first_frame = None
 status_list = []
 count = 1
 
+
 def clean_folder():
     images = glob.glob("images/*.png")
     for image in images:
         os.remove(image)
+
 
 while True:
     status = 0

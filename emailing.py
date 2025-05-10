@@ -6,6 +6,8 @@ from email.message import EmailMessage
 SENDER = "max.solo213@gmail.com"
 RECEIVER = "max.solo213@gmail.com"
 PASSWORD = os.getenv("PASSWORD")
+
+
 def send_email(image_path):
     email_message = EmailMessage()
     email_message["Subject"] = "New customer showed up!"
